@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let tongDien = Number(prompt("Nhập mức điện tiêu thụ: "));
+
+  const BAC1 = 1806;
+  const BAC2 = 1866;
+  const BAC3 = 2167;
+  const BAC4 = 2729;
+  const BAC5 = 3050;
+  const BAC6 = 3151;
+
+  result1 = tongDien * BAC1;
+  result2 = tongDien * BAC2;
+  result3 = tongDien * BAC3;
+  result4 = tongDien * BAC4;
+  result5 = tongDien * BAC5;
+  result6 = tongDien * BAC6;
+
+  if (tongDien > 401) {
+    document.write("Tổng tiền điện tháng này là: " + new Intl.NumberFormat("en-US").format(result6) + "vnđ");
+  } else if (tongDien >= 301) {
+    document.write("Tổng tiền điện tháng này là: " + new Intl.NumberFormat("en-US").format(result5) + "vnđ");
+  } else if (tongDien >= 201) {
+    document.write("Tổng tiền điện tháng này là: " + new Intl.NumberFormat("en-US").format(result4) + "vnđ");
+  } else if (tongDien >= 101) {
+    document.write("Tổng tiền điện tháng này là: " + new Intl.NumberFormat("en-US").format(result3) + "vnđ");
+  } else if (tongDien >= 51) {
+    document.write("Tổng tiền điện tháng này là: " + new Intl.NumberFormat("en-US").format(result2) + "vnđ");
+  } else if (tongDien >= 0) {
+    document.write("Tổng tiền điện tháng này là: " + new Intl.NumberFormat("en-US").format(result1) + "vnđ");
+  } else {
+    alert("Thông tin nhập vào phải là số dương. Vui lòng nhập lại!")
+  }
+</script>
+</body>
+</html>

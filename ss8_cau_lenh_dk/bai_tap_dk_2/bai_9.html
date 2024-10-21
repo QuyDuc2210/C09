@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhập giá trị a:");
+  let b = +prompt("Nhập giá trị b:");
+  let c = +prompt("Nhập giá trị c:");
+
+  let sum1 = a + b;
+  let sum2 = a + c;
+  let sum3 = b + c;
+
+  if (a <= 0 || b <= 0 || c <= 0) {
+    alert("Không phải là 3 cạnh của một tam giác");
+  } else if (sum1 <= c || sum2 <= b || sum3 <= a) {
+    alert("Không phải là 3 cạnh của một tam giác");
+  } else {
+    document.write("Ba cạnh của tam giác lần lượt là: a= " + a + ", b= " + b + ", c= " + c);
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const CANHAN = 11000000;
+const PHUTHUOC = 4400000;
+
+// thuế suất theo bậc
+const BAC1 = 0.05;
+const BAC2 = 0.1;
+const BAC3 = 0.15;
+
+// thu nhập tính thuế theo bậc
+const MUC1 = 5000000;
+const MUC2 = 10000000;
+
+let luong = +prompt("Tổng tiền lương mỗi tháng: ");
+let soNguoi = +prompt("Nhập số lượng người phụ thuộc:")
+
+let thue = luong - CANHAN - soNguoi * PHUTHUOC;
+console.log(thue);
+let result1 = thue * BAC1;
+let result2 = (thue - MUC1) * BAC2 + MUC1 * BAC1;
+let result3 = (thue - MUC2) * BAC3 + MUC1 * BAC1 + (MUC2 - MUC1) * BAC2;
+console.log((thue - MUC2) * BAC3);
+console.log(result3);
+
+if (luong > 11000000) {
+  if (thue > 10000000) {
+    document.write("Thuế TNCN cần phải đóng tháng này là: " + new Intl.NumberFormat("en-US").format(result3.toFixed(2)) + "vnđ");
+  } else if (thue > 5000000) {
+    document.write("Thuế TNCN cần phải đóng tháng này là: " + new Intl.NumberFormat("en-US").format(result2.toFixed(2)) + "vnđ");
+  } else if (thue > 0) {
+    document.write("Thuế TNCN cần phải đóng tháng này là: " + new Intl.NumberFormat("en-US").format(result1.toFixed(2)) + "vnđ");
+  } else {
+    document.write("Thuế TNCN cần phải đóng tháng này là: 0VNĐ ");
+  }
+} else {
+  document.write("Thuế TNCN cần phải đóng tháng này là: 0vnđ ");
+}
+
+</script>
+</body>
+</html>
