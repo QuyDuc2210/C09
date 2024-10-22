@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="table"></table>
+</body>
+<script>
+  let tableElm = document.getElementById("table");
+  let tableHTML = '';
+  for (let i = 1; i <= 9; i++) {
+    tableHTML += "<tr>";
+    for (let j = 2; j <= 9; j++) {
+      tableHTML += "<td>" + j + "x" + i + "=" + j * i + "</td>";
+    }
+    tableHTML += "</tr>";
+  }
+  tableElm.innerHTML = tableHTML;
+</script>
+</html>

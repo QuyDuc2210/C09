@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Game đoán số</p>
+<button id="Chơi">Chơi </button>
+<script>
+  document.getElementById('Chơi').onclick = function () {
+    let min = parseInt(prompt("Min:"));
+    let max = parseInt(prompt("Max:"));
+
+    let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+    let attempts = 0;
+
+    while (attempts < 3) {
+      let guess = parseInt(prompt("Bạn đoán số nào? (Lần thử " + (attempts + 1) + "):"));
+      if (guess === randomNumber) {
+        alert("Chúc mừng! Bạn đã đoán đúng số: " + randomNumber);
+        return;
+      } else if (guess < randomNumber) {
+        alert("Số bạn đoán thấp hơn. Hãy thử lại.");
+      } else if (guess > randomNumber) {
+        alert("Số bạn đoán lớn hơn. Hãy thử lại.");
+      }
+
+      attempts++;
+    }
+    alert("Bạn đã hết lượt chơi. Số đúng là: " + randomNumber);
+  }
+</script>
+</body>
+</html>
