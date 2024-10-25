@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let amount = parseFloat(prompt("Nhập số tiền ban đầu: "));
+  let monthlyRate = parseFloat(prompt("Nhập lãi suất hàng tháng:"));
+  let months = parseInt(prompt("Nhập số tháng cho vay: "));
+
+  function calculate() {
+    let totalAmount = amount;
+    for (let i = 1; i <= months; i++) {
+      totalAmount += totalAmount * monthlyRate;
+    }
+    return totalAmount;
+  }
+
+  let finalAmount = calculate();
+  document.write("Số tiền sau " + months + " tháng là: " + finalAmount + " VND");
+</script>
+</body>
+</html>
