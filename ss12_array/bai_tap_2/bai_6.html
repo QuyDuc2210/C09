@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let input = prompt("Nhập vào một chuỗi");
+  let charArray = [];
+
+  document.write("Mảng ban đầu : " + input + "<br>");
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "-") {
+      charArray.push("_");
+    } else {
+      charArray.push(input[i]);
+    }
+  }
+  document.write("Mảng sau khi thay đổi : " + charArray.join(""));
+</script>
+</body>
+</html>
