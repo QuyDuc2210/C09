@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập một ký tự để kiểm tra xem có phải là số không");
+
+    function isNumber(char) {
+        return !isNaN(char);
+    }
+
+    let result;
+    if (isNumber(input)) {
+        result = "Ký tự '" + input + "' là một số.";
+    } else {
+        result = "Ký tự '" + input + "' không phải là một số.";
+    }
+
+    document.write(result);
+</script>
+</body>
+</html>

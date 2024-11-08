@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let input = parseFloat(prompt("Nhập vào một số"));
+  let result = checkNumber(input);
+
+  function checkNumber(input) {
+    return Number.isInteger(input) && input > 0;
+  }
+
+  if (checkNumber(input)) {
+    document.write(input + " là một số nguyên dương");
+  } else {
+    document.write(input + " không phải là một số nguyên dương")
+  }
+</script>
+</body>
+</html>

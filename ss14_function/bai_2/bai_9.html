@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let characters = ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd'];
+  let check = prompt("Nhập ký tự cần kiểm tra:");
+  let result = countCharacter(characters, check);
+
+  function countCharacter(arr, char) {
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === char) {
+        count++;
+      }
+    }
+    if (count > 0) {
+      return count;
+    } else {
+      return -1;
+    }
+  }
+
+  document.write(`Mảng ký tự : [${characters}]<br>`);
+  document.write(`Số lần xuất hiện của '${check}': ${result}`);
+</script>
+</body>
+</html>

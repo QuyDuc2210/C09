@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let r =+prompt("Nhập bán kính")
+  function tinhdientichHinhtron(banKinh){
+    return Math.PI * r * r
+  }
+  function tinhChuViHinhTron(banKinh) {
+    return 2 * Math.PI * r
+  }
+  let dienTich = tinhdientichHinhtron(r)
+  let chuVi = tinhChuViHinhTron(r)
+  console.log("Diện tích hình tròn:", dienTich);
+  console.log("Chu vi hình tròn:", chuVi);
+</script>
+</body>
+</html>

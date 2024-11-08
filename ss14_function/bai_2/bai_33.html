@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập một số nguyên bất kỳ:"));
+    let result = factorial(num);
+
+    function factorial(num) {
+        if (num < 0) {
+            return "Không thể là số âm";
+        }
+        let result = 1;
+        for (let i = 2; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    document.write(`Giai thừa của ${num} là ${result}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let num1 = parseInt(prompt("Nhập vào số nguyên thứ nhất:"));
+  let num2 = parseInt(prompt("Nhập vào số nguyên thứ hai:"));
+  let [newNum1, newNum2] = swapNumber(num1, num2);
+
+  function swapNumber(a, b) {
+    return [b, a];
+  }
+
+  document.write(`Số sau khi đổi chỗ:<br>Số 1: ${newNum1}<br>Số 2: ${newNum2}`);
+</script>
+</body>
+</html>

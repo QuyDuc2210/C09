@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let reversedNumbers = reverseArray(numbers);
+
+  function reverseArray(arr) {
+    let reversed = []
+    for (let i = arr.length - 1; i >= 0; i--) {
+      reversed.push(arr[i])
+    }
+    return reversed;
+  }
+
+  document.write(`Mảng gốc: [${numbers}]<br>`);
+  document.write(`Mảng sau khi đảo ngược: [${reversedNumbers}]`);
+</script>
+</body>
+</html>
