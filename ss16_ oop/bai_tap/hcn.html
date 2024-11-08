@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hình Chữ Nhật</h1>
+<label for="length">Chiều dài:</label>
+<input type="number" id="length" placeholder="Nhập chiều dài">
+<label for="width">Chiều rộng:</label>
+<input type="number" id="width" placeholder="Nhập chiều rộng:"><br><br>
+
+<label for="operation">Chọn phép toán:</label>
+<select id="operation">
+  <option value="area">Tính Diện Tích</option>
+  <option value="perimeter">Tính Chu Vi</option>
+</select><br><br>
+
+<button onclick="calculate()">Tính</button>
+
+<h2>Kết quả:</h2>
+<p id="result"></p>
+
+<canvas id="rectangleCanvas" width="400" height="300"></canvas>
+
+<script>
+  class Rectangle {
+    constructor(length, width) {
+      this.length = length;
+      this.width = width;
+    }
+
+    area() {
+      return this.length * this.width;
+    }
+
+    perimeter() {
+      return 2 * (this.length + this.width);
+    }
+
+    draw(canvasId) {
+      const canvas = document.getElementById(canvasId);
+      const context = canvas.getContext("2d");
+      context.fillRect(0, 0, this.length, this.width);
+    }
+  }
+
+  function calculate() {
+    const length = parseInt(document.getElementById("length").value);
+    const width = parseInt(document.getElementById("width").value);
+    const operation = document.getElementById("operation").value;
+    const rectangle = new Rectangle(length, width);
+    let result;
+
+    if (operation === "area") {
+      result = `Diện tích: ${rectangle.area()}`;
+    } else if (operation === "perimeter") {
+      result = `Chu vi: ${rectangle.perimeter()}`;
+    }
+
+    document.getElementById("result").innerText = result;
+    rectangle.draw("rectangleCanvas");
+  }
+
+</script>
+</body>
+</html>
