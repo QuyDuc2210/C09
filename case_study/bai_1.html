@@ -6,22 +6,39 @@
 </head>
 <body>
 <script>
-    let n = prompt("Nhập độ dài của mảng :");
-    let arr = [];
+
+    // nhập n từ bàn phím ; nếu không thảo mãn thì phải nhập lại
+    let n;
+    do {
+        n = prompt("nhập độ dài");
+    } while (n <= 0 || n > 20 || n % 1 != 0);
+    // nhập mảng
+    let array = [];
+    // 5 điểm
     for (let i = 0; i < n; i++) {
-        let num = prompt(`Nhập phần tử thứ ${i + 1}`);
-        arr.push(num);
+        array.push(+prompt("nhập phần tử thứ : " + (i + 1)));
     }
-    console.log("Mảng sau khi nhập :", arr)
-    function checkIncrease(arr){
-        for (let i = 0; i <arr.length ; i++) {
-            if (arr[i]<=arr[i-1]){
-                return false
+    // hiển thị mảng sau khi nhập;
+    alert("mảng vừa nhập là : " + array);
+    // 15 điểm : kiểm tra mảng tăng dần đều
+    let diff = array[1]- array[0];
+    if (diff<=0||array.length<3){
+        alert("NOT")
+    }else {
+        let flag = true;
+        for (let i = 1; i <array.length-1 ; i++) {
+            if (array[i+1]-array[i]!==diff){
+                flag = false;
+                break;
             }
         }
-        return true
+        // kết luận ok
+        if (flag){
+            alert("OK")
+        }else {
+            alert("NOT")
+        }
     }
-    console.log(checkIncrease(arr))
 
 </script>
 </body>
