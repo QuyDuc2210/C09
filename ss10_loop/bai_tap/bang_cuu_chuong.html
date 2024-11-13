@@ -5,18 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<table id="table"></table>
 </body>
+<p id="result"></p>
 <script>
-  let tableElm = document.getElementById("table");
-  let tableHTML = '';
-  for (let i = 1; i <= 9; i++) {
-    tableHTML += "<tr>";
-    for (let j = 2; j <= 9; j++) {
-      tableHTML += "<td>" + j + "x" + i + "=" + j * i + "</td>";
+    let tableString = `<table border="1" style="border-collapse: collapse">`;
+    tableString +=`<tr>`
+    for (let i = 2;  i<=9; i++) {
+        tableString += `<th>Bảng ${i}</th>`
     }
-    tableHTML += "</tr>";
-  }
-  tableElm.innerHTML = tableHTML;
+    tableString +=`</tr>`
+    for (let i = 1; i <=10 ; i++) {
+        tableString +=`  <tr>`;
+        for (let j = 2; j <=9 ; j++) {
+            tableString += ` <td>${j}x${i}=${i*j}</td>`
+        }
+        tableString += `</tr>`
+    }
+    tableString +=`</table>`
+    document.getElementById("result").innerHTML =tableString;
 </script>
 </html>

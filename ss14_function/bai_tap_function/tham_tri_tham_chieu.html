@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //   let b = 10;
+    //   // tham trị: khi gọi hàm truyền biến kiểu dữ liệu nguyên thuỷ vào cho hàm
+    //   change1(b);
+    //   console.log("ngoai hàm: " +b);
+    //
+    //   function change1(a) {
+    //          a ++;
+    //       console.log("trong hàm: " +a);
+    //   }
+    //     // a =10, b=11
+    //      // a =11, b10;
+    //  let mang = [1,2];
+    //   // tham chiếu: khi gọi hàm truyền đối số kiểu ( kiểu dữ liệu đối tượng/ tham chiếu) vào cho hàm  => tham chiếu
+    //   change2(mang);
+    //   console.log(" mang ngoai hàm "+ mang);
+    //
+    // function change2(arr){
+    //       arr[0]= 100;
+    //       arr[1] = 200;
+    //     console.log("arr trong hàm: "+ arr);
+    // }
+
+    let n1 =10;
+    let n2 =n1; //10
+    n1++;
+    console.log(n1) // 11
+    console.log(n2) //10
+
+    let arr1 = [10,20];
+    let arr2 = [...arr1]; // spread operator
+    arr1[0]= 100;
+
+    console.log(arr1); // 100,20
+    console.log(arr2);// 100,20
+
+
+    // mang [1,2]; arr[100,200]; ngoài không thay đổi
+    // mang [100,200]; arr [100,200]; ngoài thay đổi theo bên trong
+</script>
+</body>
+</html>

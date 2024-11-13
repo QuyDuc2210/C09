@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập độ dài của mảng :");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let num = prompt(`Nhập phần tử thứ ${i + 1}`);
+        arr.push(num);
+    }
+    console.log("Mang sau khi nhap la :" +arr)
+    function checkArr(arr){
+        let evenNumber = false
+        let oddNumber = false
+        for (let i = 0; i <arr.length ; i++) {
+            if (arr[i] % 2 === 0){
+                evenNumber = true
+            } if (arr[i] % 2 !== 0){
+                oddNumber = true
+            }
+        }if (evenNumber && oddNumber){
+            return -1
+        }else if (evenNumber){
+            return 1
+        }else {
+            return 0
+        }
+    }
+    console.log(checkArr(arr))
+</script>
+</body>
+</html>

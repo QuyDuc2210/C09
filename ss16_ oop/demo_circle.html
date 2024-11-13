@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius =radius;
+        }
+
+        // getter => lấy thông tin của thuộc tính
+        getRadius(){
+            return this.radius;
+        }
+        // setter thay đổi thuộc tính
+        setRadius(radius){
+            this.radius = radius;
+        }
+        getArea(){
+            return this.radius*this.radius*Math.PI
+        }
+
+    }
+
+    // 4 tính chất ( tính bao đóng) => che dấu thuộc tính của đối tượng;
+
+    let hinhTron = new Circle(10,"red");
+    // console.log(hinhTron.radius); // không thể tính báo đóng
+    // hinhTron.radius = 30; // không dùng => không thể hiện tính báo đóng
+
+    hinhTron.setRadius(30); // khuyến khích dùng
+    console.log(hinhTron.getRadius()); // không thể tính báo đóng
+    console.log(hinhTron.getArea()); // không thể tính báo đóng
+
+
+</script>
+</body>
+</html>

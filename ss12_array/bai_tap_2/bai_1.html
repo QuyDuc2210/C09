@@ -14,11 +14,11 @@
     [3, 10, 26, 7]
   ];
 
-  for (let i in array) {
-    document.write("row " + i + "<br>");
-    for (let j in array[i]) {
-      document.write(" " + array[i][j] + "<br>");
-    }
+  for (let i = 0; i <array.length ; i++) {
+      console.log(`row${i}`);
+      for (let j = 0; j <array[i].length ; j++) {
+          console.log(array[i][j])
+      }
   }
 
 

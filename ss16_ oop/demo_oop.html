@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // khai báo một đối tượng trực tiếp literal
+    let student1 = {
+        // thuộc tính
+        id: 1,
+        name: "chánh1",
+        age: 40,
+        // hanh vi (hành động)/hàm => phương thức (method)
+        study: function(subject) {
+            console.log("học viên đang học môn :"+subject);
+        },
+        howToGo: function(){
+            console.log("Đi xe máy")
+        }
+    }
+    //
+    // let student2 = {
+    //     // thuộc tính
+    //     id: 2,
+    //     name: "chánh2",
+    //     age: 41,
+    //     // hanh vi (hành động)/hàm => phương thức (method)
+    //     study: function(subject) {
+    //         console.log("học viên đang học môn :"+subject);
+    //     },
+    //     howToGo: function(){
+    //         console.log("Đi xe máy")
+    //     }
+    // }
+    //
+    //
+    // console.log(student1.name);
+    // student1.study("Toán");
+    //
+    // student2.name = "chánh22"
+    // console.log(student2.name);
+    // student2.howToGo();
+    // classs => tên class theo quy tức PascalCase
+
+    // sử dụng function
+    // function SinhVien(ma,ten, tuoi) {
+    //     this.id = ma;
+    //     this.name = ten;
+    //     this.age =tuoi;
+    //
+    //     this.study = function (subject) {
+    //         console.log("học viên đang học môn : "+ subject);
+    //     }
+    //
+    // }
+    // tù khoá class => có từ ES6 => version của js (2015)
+
+    class SinhVien{
+
+        // là một method (phương thức đặc biệt) để khai báo thuộc tính và khởi tạo đối tượng
+        constructor(ma,ten,tuoi) {
+            this.id = ma;
+            this.name = ten;
+            this.age = tuoi;
+        }
+        study(subject){
+            console.log(this.name+" học viên đang học môn : "+ subject);
+        }
+    }
+
+    let sinhVien1 = new SinhVien(1,'chanh11',40);
+    sinhVien1.study("toán");
+    let sinhVien2 = new SinhVien(2,'chanh2',40);
+    sinhVien2.study("văn");
+    let sv3 = new SinhVien(3,'chanh11',40);
+    let sv4 = new SinhVien(4,'chanh11',40);
+</script>
+</body>
+</html>
