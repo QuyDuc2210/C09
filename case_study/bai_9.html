@@ -16,11 +16,11 @@
     } else
         function checkPairs(arr) {
             for (let i = 0; i < arr.length - 1; i += 2) {
-                if (arr[i] > arr[i + 1]) {
-                    return "NO";
+                if (arr[i] >= arr[i + 1]) {
+                    alert("NO");
                 }
             }
-            return "OK";
+            alert("OK");
         }
     console.log(checkPairs(arr))
 </script>
