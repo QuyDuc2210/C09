@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập độ dài của mảng :");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let num = +prompt(`Nhập phần tử thứ ${i + 1}`);
+        arr.push(num);
+    }
+    alert("Mang sau khi nhap la :" + arr)
+    alert(checkAllPrime(arr));
+
+    function checkAllPrime(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (checkPrime(arr[i])) {
+                count++;
+            }
+        }
+        if (count === arr.length) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkPrime(n) {
+        let count = 0;
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+</script>
+</body>
+</html>
