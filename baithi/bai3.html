@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = prompt("Nhập ngày và tháng theo dạng MM//YYYY")
+  function getDayInMonth(month) {
+
+    switch (month) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        return 31;
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+        return 30;
+      case 2:
+        return 29
+    }
+  }
+  function putDayAndMonth(){
+  } if (month >= 1 && month <= 12 ) {
+    let dayAndMonth =getDayInMonth(month);{
+    }
+  }
+  alert(putDayAndMonth())
+
+
+</script>
+</body>
+</html>
